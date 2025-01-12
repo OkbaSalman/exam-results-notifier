@@ -19,7 +19,6 @@ TELEGRAM_CHANNEL_ID = os.getenv("TELEGRAM_CHANNEL_ID")
 
 
 logging.basicConfig(
-    filename="app.log",
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
      handlers=[logging.StreamHandler()]
