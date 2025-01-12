@@ -1,0 +1,61 @@
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment folders
+env/
+.venv/
+venv/
+py_env/
+ENV/
+env.bak/
+
+# Environment variables
+.env
+.env.*
+
+# Logs
+*.log
+*.out
+*.err
+logs/
+*.log.*
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# IDE and editor configurations
+.vscode/
+.idea/
+*.iml
+
+# Python packages
+*.egg
+*.egg-info/
+dist/
+build/
+*.wheel
+
+# Testing and coverage
+.tox/
+.nox/
+coverage.*
+.cache
+pytest_cache/
+
+# Deployment artifacts
+*.pot
+*.mo
+
+# Temporary files
+*.swp
+*.swo
+*.bak
+*.tmp
+*.temp
+
+# Custom project-specific files
+app.log
