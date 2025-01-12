@@ -7,6 +7,8 @@ import signal
 import sys
 import os
 from dotenv import load_dotenv
+from flask import Flask
+import threading
 
 
 load_dotenv()
@@ -21,6 +23,13 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
+
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Python app is running..."
 
 
 URL = "https://tishreen.edu.sy/ar/Schedual/Results"
@@ -88,8 +97,17 @@ def graceful_exit(signum, frame):
 signal.signal(signal.SIGINT, graceful_exit)
 signal.signal(signal.SIGTERM, graceful_exit)
 
-if __name__ == "__main__":
+def start_flask():
+    app.run(host="0.0.0.0", port=8080)
+
+def start_background_task():
     logging.info("The Telegram Bot Has Been Started!")
     while True:
         fetch_and_parse_h3_elements()
-        time.sleep(10)  
+        time.sleep(10)
+
+if __name__ == "__main__":
+    flask_thread = threading.Thread(target=start_flask)
+    flask_thread.start()
+
+    start_background_task()
