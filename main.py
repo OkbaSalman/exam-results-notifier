@@ -104,7 +104,7 @@ def start_background_task():
     logging.info("The Telegram Bot Has Been Started!")
     while True:
         fetch_and_parse_h3_elements()
-        time.sleep(10)
+        time.sleep(60)
 
 if __name__ == "__main__":
     flask_thread = threading.Thread(target=start_flask)
