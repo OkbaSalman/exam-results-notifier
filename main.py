@@ -37,8 +37,8 @@ HEADERS = {"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"}
 DATA = {
     "facultyId": 51,
     "departmentId": 56,
-    "studyYearId": 11,
-    "semesterId": 2,
+    "studyYearId": 12,
+    "semesterId": 1,
 }
 
 
